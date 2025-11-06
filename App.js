@@ -1,20 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Item from './components/item';
 
-export default function App() {
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View >
+        <Text>Animal Quiz 101</Text>
+        <Item title = "Lion" image={require('./img/lion.jpg')}></Item>
+        <Item title = "Elephant" image={require('./img/elephant.jpg')}></Item>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default App;
